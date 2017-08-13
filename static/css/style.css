@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto';
+}
+
+#wrapper {
+    width: 100%;
+    margin: 0px auto;
+    padding: 50px;
+    box-sizing: border-box
+}
+
+#header h1 {
+    vertical-align: top;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+}
+
+#total {
+    vertical-align: top;
+    display: inline-block;
+    width: 160px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: left;
+    font-size: 20px;
+}
+
+#farm,
+#cave,
+#house,
+#casino {
+    display: inline-block;
+    margin: 20px 29px;
+    width: 20%;
+    height: 250px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#farm h1,
+#cave h1,
+#house h1,
+#casino h1 {
+    display: inline-block;
+    margin: 20px auto;
+}
+
+#farm p,
+#cave p,
+#house p,
+#casino p {
+    /* display: inline-block; */
+    margin: 20px auto;
+}
+
+.find_gold {
+    display: inline-block;
+    margin: 40px auto;
+    width: 100px;
+    height: 20px;
+    font-size: 20px;
+}
+
+#blog {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    overflow-y: scroll;
+}

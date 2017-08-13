@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ninja Gold</title>
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='css/style.css') }}">
+    <!-- linking a javascript file -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script> -->
+
+</head>
+
+<body>
+    <div id=wrapper>
+        <div id=header>
+            <h1>Your Gold:</h1>
+            <div id=total> {{ session['total_gold'] }}</div>
+        </div>
+        <div id=farm>
+            <h1>Farm</h1>
+            <p>(earns 10 - 20 golds)</p>
+            <form action='/process_money' method='post'>
+                <input type="hidden" name="building" value="farm" />
+                <input class='find_gold' type='submit' value='Find Gold!'>
+            </form>
+        </div>
+        <div id=cave>
+            <h1>Cave</h1>
+            <p>(earns 5 - 10 golds)</p>
+            <form action='/process_money' method='post'>
+                <input type="hidden" name="building" value="cave" />
+                <input class='find_gold' type='submit' value='Find Gold!'>
+            </form>
+        </div>
+        <div id=house>
+            <h1>House</h1>
+            <p>(earns 2 - 5 golds)</p>
+            <form action='/process_money' method='post'>
+                <input type="hidden" name="building" value="house" />
+                <input class='find_gold' type='submit' value='Find Gold!'>
+            </form>
+        </div>
+        <div id=casino>
+            <h1>Casino</h1>
+            <p>(earns/takes 0 - 50 golds)</p>
+            <form action='/process_money' method='post'>
+                <input type="hidden" name="building" value="casino" />
+                <input class='find_gold' type='submit' value='Find Gold!'>
+            </form>
+        </div>
+        <p>Activities:</p>
+        <div id=blog>
+            {% for message in session['message'] %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        <form action='/play_again' method='post'>
+            <input type='submit' name='playagain' value='New Game'>
+        </form>
+    </div>
+
+</body>
+
+
+
+</html>
